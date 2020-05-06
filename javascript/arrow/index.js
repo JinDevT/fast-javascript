@@ -1,10 +1,7 @@
 // Good
-const person = {
-    name: "jintae",
-  };
-Object.prototype.sayHi = function() {
-  console.log(`Hi ${this.name}`);
-} 
-  
-person.sayHi(); // Hello jintae
+let button = document.getElementById('myButton');
 
+button.addEventListener('click', function() {
+  console.log(this === button); // true
+  this.innerHTML = 'Clicked button';
+});
